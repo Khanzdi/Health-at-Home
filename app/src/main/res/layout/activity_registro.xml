@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.brayandavid.homemedicines.Registro">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro"
+        android:textStyle="bold"
+        android:textSize="25dp"
+        android:textColor="#888"
+        android:gravity="center"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txtuser"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/ingresa_ac_su_usuario_email"
+                android:inputType="textEmailAddress"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="USER EMAIL"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtpassword"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:hint="Ingrese su contraseña"
+                android:inputType="textPassword"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Ingrese su nombre"
+                android:textStyle="bold"
+                android:id="@+id/txtname"/>
+
+            <TextView
+                android:id="@+id/text_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NAME"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtlastname"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:hint="Ingrese su Apellido"
+                android:inputType="textPersonName"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_lastname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="LAST NAME"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/txtage"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="Ingresa acá su Edad"
+                android:inputType="number"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/text_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="AGE"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txtgender"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:ems="10"
+                android:hint="Ingresa acá su Género"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GENDER"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+            <EditText
+                android:id="@+id/txt_hours"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:ems="10"
+                android:hint="Ingrese sus horas de trabajo"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/texthours"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="HOURS OF WORK"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txt_type"
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:hint="Admin o mensajero"
+                android:inputType="textPersonName"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/texttype"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TYPE USER"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btn-registro"
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/colorPrimaryDark"
+                android:lineSpacingExtra="14sp"
+                android:onClick="btn_Registro_Click"
+                android:text="REGISTER"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:visibility="visible"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
