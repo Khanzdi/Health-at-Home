@@ -3,10 +3,9 @@ package com.example.brayandavid.homemedicines.Conection;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.example.brayandavid.homemedicines.Objects.Buyer;
 import com.example.brayandavid.homemedicines.Objects.Category;
+import com.example.brayandavid.homemedicines.Objects.Product;
 import com.example.brayandavid.homemedicines.Security;
-import com.loopj.android.http.HttpGet;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -16,51 +15,57 @@ import java.util.List;
 
 import cz.msebera.android.httpclient.HttpResponse;
 import cz.msebera.android.httpclient.client.HttpClient;
+import cz.msebera.android.httpclient.client.methods.HttpGet;
 import cz.msebera.android.httpclient.impl.client.DefaultHttpClient;
 import cz.msebera.android.httpclient.util.EntityUtils;
 
 /**
- * Created by Kevin Ortiz on 15/03/2018.
+ * Created by Kevin Ortiz on 5/22/2018.
  */
 
-public class TaskBuy extends AsyncTask<String, Integer, List<Buyer>>{
-static int code;
+public class TaskAddProduct extends AsyncTask<String, Integer, List<Product>> {
+    static int code;
 
-    public TaskBuy() {}
+    public TaskAddProduct() {
+    }
+
+    public static int getCode() {return code;}
+
+    public static void setCode(int code) {TaskAddProduct.code = code;}
 
     @Override
-    protected List<Buyer> doInBackground(String... strings) {
+    protected List<Product> doInBackground(String... strings) {
         HttpClient httpClient = new DefaultHttpClient();
-        HttpGet del = new HttpGet("http://13.90.130.197/product/category/");
+        HttpGet del = new HttpGet("http://13.90.130.197/product");
         del.setHeader("content-type", "application/json");
         del.setHeader("Authorization", Security.getToken());
+
         try {
             HttpResponse resp = httpClient.execute(del);
             String respStr = EntityUtils.toString(resp.getEntity());
 
             JSONArray respJSON = new JSONArray(respStr);
 
-            List<Buyer> productsList = new ArrayList<>();
+            List<Product> productsList = new ArrayList<>();
 
             for (int i = 0; i < respJSON.length(); i++) {
                 JSONObject obj = respJSON.getJSONObject(i);
 
-                Buyer buyer = new Buyer();
-                buyer.setFullName(obj.getString("fullName"));
-                buyer.setContactPhone(obj.getString("contactPhone"));
-                buyer.setDniNumber(obj.getInt("dniNumber"));
-                buyer.setEmailAddress(obj.getString("emailAddress"));
-                buyer.setMerchantBuyerId(obj.getString("merchantBuyerId"));
-
-
+                Product product = new Product();
+                product.setId(obj.getString("id"));
+                product.setName(obj.getString("name"));
+                product.setDescription(obj.getString("description"));
+                product.setEachPrice(obj.getDouble("eachPrice"));
+                product.setMedicalCharacteristics(obj.getString("medical_characteristics"));
+                product.setVolume(obj.getString("volume"));
 
                 JSONObject categoryJson = obj.getJSONObject("category");
                 Category category = new Category();
                 category.setId(categoryJson.getString("id"));
                 category.setName(categoryJson.getString("name"));
 
-
-                productsList.add(buyer);
+                product.setCategory(category);
+                productsList.add(product);
             }
 
             return productsList;
@@ -69,11 +74,4 @@ static int code;
         }
         return new ArrayList<>();
     }
-
-    public static int getCode() {return code;}
-
-    public static void setCode(int code) {TaskBuy.code = code;}
-
-
-
 }

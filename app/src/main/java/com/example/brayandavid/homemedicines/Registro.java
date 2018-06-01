@@ -65,7 +65,7 @@ public class Registro extends AppCompatActivity {
             Intent i = new Intent(Registro.this, LoginUser.class);
             startActivity(i);
         }else {
-            Toast.makeText(this, "Something was wrong, try again",
+            Toast.makeText(this, "Something was wrong, try again "+ code,
                     Toast.LENGTH_LONG).show();
             Intent i = new Intent(Registro.this, Registro.class);
             startActivity(i);

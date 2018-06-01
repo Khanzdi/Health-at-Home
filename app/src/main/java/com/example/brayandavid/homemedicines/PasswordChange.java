@@ -47,22 +47,22 @@ public class PasswordChange extends AppCompatActivity {
 
         if (code == 200 || code == 201) {
             Intent h = new Intent(PasswordChange.this, LoginUser.class);
-            Toast.makeText(this, " ¡Password modification successful!", Toast.LENGTH_LONG);
+            Toast.makeText(this, " ¡Password modification successful!", Toast.LENGTH_LONG).show();
             JSONObject token = new JSONObject(resul);
             Security.setToken("Bearer " + token.getString("token"));
             startActivity(h);
         }
         if (code == 404) {
-            Toast.makeText(this, " Wait ¡Last Password incorrect!", Toast.LENGTH_LONG);
+            Toast.makeText(this, " Wait ¡Last Password incorrect!", Toast.LENGTH_LONG).show();
         }
         if (code == 401) {
-            Toast.makeText(this, " Wait ¡Password or user incorrect!", Toast.LENGTH_LONG);
+            Toast.makeText(this, " Wait ¡Password or user incorrect!", Toast.LENGTH_LONG).show();
         }
         if (code == 403) {
-            Toast.makeText(this, " ¡Access denegate! ", Toast.LENGTH_LONG);
+            Toast.makeText(this, " ¡Access denegate! ", Toast.LENGTH_LONG).show();
         }
         if (code == 405) {
-            Toast.makeText(this, " ¡Reset the password! ", Toast.LENGTH_LONG);
+            Toast.makeText(this, " ¡Reset the password! ", Toast.LENGTH_LONG).show();
             Intent j = new Intent(this, PasswordChange.class);
             startActivity(j);
         }

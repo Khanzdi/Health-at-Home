@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.brayandavid.homemedicines.Activity_compra">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compra de Producto"
+        android:textStyle="bold"
+        android:textSize="28dp"
+        android:textColor="#888"
+        android:gravity="center"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/txnombrecompleto"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Fullname"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_nombreuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOMBRE"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txdni"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Documentodeidentidad"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_documentouser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DOCUMENTO DE IDENTIDAD"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txnumerodecontacto"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Contactphone"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_phoneuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TELÉFONO CONTACTO"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txemaildecompra"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/ingresa_ac_su_usuario_email"
+                android:inputType="textEmailAddress"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_emailuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="EMAIL"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txnombretitulartarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/titulartajeta"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_tarjetauser2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NOMBRE TITULAR"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txnumerotarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/numerotajeta"
+                android:inputType="number"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_numerotarjetauser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NÚMERO TARJETA DE CRÉDITO"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txfechaexpiraciontarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/fechaexpiracion"
+                android:inputType="date"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_fechaexpiraciontarjetauser2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="FECHA EXPIRACIÓN TARJETA DE CRÉDITO"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txcodigoseguridadtarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/codigoseguridadtarjeta"
+                android:inputType="date"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_codigoseguridadtarjetauser2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CÓDIGO SEGURIDAD TARJETA DE CRÉDITO"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txnombreciudad"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Ciudad"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_ciudaduser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CIUDAD"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txnombrepais"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Pais"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_paisuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PAÍS"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txnombreestado"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Estado"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_estadouser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ESTADO"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txnumerodetelefonousuario"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Contactphone"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_telefonouser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TELÉFONO"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txcodigopostal"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Codigopostal"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_codigopostaluser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CÓDIGO POSTAL"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txdireccion1"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Direccion1"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_direccion1user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DIRECCIÓN 1"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/txdireccion2"
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:hint="@string/Direccion2"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/text_direccion2user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="DIRECCIÓN 2"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

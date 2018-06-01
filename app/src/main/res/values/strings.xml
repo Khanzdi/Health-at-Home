@@ -21,4 +21,28 @@
     <string name="title_servicios_list">Productos</string>
     <string name="title_servicios_detail">Servicios Detail</string>
     <string name="ingresa_ac_su_usuario_email">Ingresa su Correo</string>
+    <string name="title_activity_search">SearchActivity</string>
+
+    <string name="action_help">Help</string>
+    <string name="action_about">About</string>
+    <string name="action_search">search</string>
+    <string name="search">Search Demo</string>
+    <string name="submitted">submitted</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="Fullname">Nombre Completo</string>
+    <string name="Documentodeidentidad">Dni</string>
+    <string name="Contactphone">Número de teléfono</string>
+    <string name="titulartajeta">Nombre de Titular Tarjeta de Crédito</string>
+    <string name="numerotajeta">Número Tarjeta de Crédito</string>
+    <string name="fechaexpiracion">fecha Expiración Tarjeta de Crédito</string>
+    <string name="codigoseguridadtarjeta">Código Seguridad Tarjeta de Crédito</string>
+    <string name="Ciudad">Ingrese su Ciudad</string>
+    <string name="Pais">Ingrese su País</string>
+    <string name="Estado">Ingrese su Estado</string>
+    <string name="Codigopostal">Ingrese Código Postal</string>
+    <string name="Direccion1">Ingrese su Dirección</string>
+    <string name="Direccion2">Ingrese su Dirección</string>
+
+
 </resources>
